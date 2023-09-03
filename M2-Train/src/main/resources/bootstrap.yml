@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: Train_Microservice 
+  cloud:
+    consul:
+      discovery:
+        hostname: localhost
+      config:
+        enabled: true
+        prefixes: config
+        default-context: application
+        profile-separator: '::'
+        format: YAML
+management:
+  endpoint:
+    consul:
+      enabled: true
+    serviceregistry:
+      enabled: true
+#    health:
+#      show-details: always

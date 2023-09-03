@@ -1,0 +1,61 @@
+server:
+  port: 8080
+  
+spring:
+  application:
+    name: Route_Microservice
+  cloud:
+    consul:
+      discovery:
+        hostname: localhost
+      config:
+        enabled: true
+        prefixes: config
+        default-context: application
+        profile-separator: '::'
+        format: YAML
+        
+management:
+  endpoint:
+    consul:
+      enabled: true
+    serviceregistry:
+      enabled: true
+#server:
+#  port: 8080
+#  
+#spring:
+#  application:
+#    name: Route_Microservice
+#  cloud:
+#    consul:
+#      host: localhost
+#      config:
+#        fail-fast: false
+#        enabled: true
+#        prefixes: config
+#        defaultContext: application
+#        data-key: data
+#        profileSeparator: '::'
+#        format: YAML 
+
+#server:
+#  port: 8080
+#
+#spring:
+#  application:
+#    name: Route_Microservice
+#  cloud:
+#    consul:
+#      host: localhost
+#  config:
+#    fail-fast: false
+#    enabled: true
+#    prefix: config
+#    default-context: application
+#    data-key: data
+#    profile-separator: '::'
+#    format: YAML
+
+
+
